@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css" />
+		
+		<script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+        
+		<title>Hello World</title>
+    </head>
+    <body>
+        <div data-role="page" id="selection">
+            <div data-role="header" data-position="fixed">
+				<h1>Mensa Foto Upload</h1>
+			</div>
+            <div role="main" class="ui-content">
+				<ul data-role="listview" data-inset="true" id="tokens"></ul>
+            </div>
+        </div>
+		<div data-role="page" id="photo" style="background-color: black;">
+            <div data-role="header" data-position="fixed" data-theme="b">
+				<h1>Mensa Foto Upload</h1>
+			</div>
+        </div>
+		<div data-role="page" id="upload">
+            <div data-role="header" data-position="fixed">
+				<h1>Mensa Foto Upload</h1>
+			</div>
+            <div role="main" class="ui-content" style="text-align: center;">
+				<p style="font-size: 200%;" id="uploadSuccess1"></p>
+				<p id="uploadSuccess2"></p>
+				<p style="font-size: 200%;" id="uploadSuccess3"></p>
+				<a href="#selection" class="ui-btn ui-corner-all ui-shadow ui-btn-a" data-transition="slide">Zurück</a>
+			</div>
+        </div>
+		<div data-role="page" id="dialog" data-dismissible="false">
+			<div data-role="header">
+				<h1>Error</h1>
+			</div>
+			<div data-role="content">
+				<p><strong id="errorType"></strong></p>
+				<p id="errorText"></p>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-a" data-rel="back" data-transition="flow">OK</a>
+			</div>
+		</div>
+    </body>
+</html>
