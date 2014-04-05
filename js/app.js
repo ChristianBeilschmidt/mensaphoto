@@ -90,7 +90,9 @@ var app = {
 	
 	onPhotoSuccess: function(imageURI) {
 		app.selectedImage = imageURI;
-		$.mobile.changePage( "#upload");
+		$.mobile.changePage("#upload");
+		$.mobile.loading("show");
+		
 		app.uploadImage();
 	},
 	
@@ -123,12 +125,14 @@ var app = {
 	},
 	
 	onUploadSuccess: function() {
+		$.mobile.loading("hide");
 		$('#uploadSuccess1').html('✔');
 		$('#uploadSuccess2').html('Upload successful!');
 		$('#uploadSuccess3').html('✔');
 	},
 	
 	onUploadFailed: function() {
+		$.mobile.loading("hide");
 		$('#uploadSuccess1').html('✘');
 		$('#uploadSuccess2').html('Upload failed!');
 		$('#uploadSuccess3').html('✘');

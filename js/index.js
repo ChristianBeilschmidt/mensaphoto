@@ -7,7 +7,7 @@ $(document).ready(function() {
     }
 	
 	//todo REMOVE
-	window.isphone = false;
+	//window.isphone = false;
 
     if( window.isphone ) {
         document.addEventListener("deviceready", app.onDeviceReady, false);
